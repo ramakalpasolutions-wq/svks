@@ -403,7 +403,7 @@ export default function HomePage() {
               Cultural Events
             </h4>
             <p className="text-xl leading-relaxed text-gray-200 text-center max-w-md mx-auto opacity-95">
-              Temple festivals, weddings, community celebrations featuring vibrant kolatam performances
+              Temple festivals featuring vibrant kolatam performances
             </p>
           </article>
           

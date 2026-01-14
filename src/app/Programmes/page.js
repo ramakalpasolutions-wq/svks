@@ -15,7 +15,7 @@ export default function Programmes() {
         
           {/* <div className="text-5xl md:text-6xl">🛕</div> */}
         <h1 className="text-4xl md:text-6xl mb-8 text-yellow-300 uppercase">
-         🛕Devotional ,Training & Programmes
+         🛕Devotional Training & Programmes
         </h1>
         
         <p className="text-2xl md:text-5xl text-yellow-200 mb-12 max-w-2xl mx-auto font-serif">

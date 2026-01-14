@@ -20,7 +20,7 @@ export default function About() {
         </h1>
         
         <div className="text-xl sm:text-2xl md:text-3xl text-[var(--gold)] mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
-          Established 2018 - Preserving sacred Kolatam tradition through exclusive devotional performances for Sri Venkateswara Swamy.
+          Established 2018 - Preserving sacred Kolatam tradition through exclusive devotional performances for Devotional entities.
         </div>
         
         <div className="h-1 sm:h-2 w-24 sm:w-32 md:w-48 mx-auto bg-[var(--gold)] rounded-full mb-8"></div>
@@ -36,13 +36,13 @@ export default function About() {
           </h2>
          <div className="max-w-4xl mx-auto prose prose-2xl text-xl sm:text-2xl md:text-3xl leading-relaxed text-[var(--gold)] text-center px-4">
   <p className="mb-8">
-    <strong>Kolatam</strong> - the sacred <strong>stick dance of devotion</strong> - is performed only in <strong>Sri Venkateswara Swamy temples</strong>. 
+    <strong>Kolatam</strong> - the sacred <strong>stick dance of devotion</strong> - is performed only in <strong>temple and devotional occations</strong>. 
     Graceful dancers form a <strong>holy circle</strong>, each holding <strong>two divinely blessed wooden sticks</strong>, striking perfect synchronized rhythms 
     while moving clockwise around the sacred sanctum in mesmerizing circular patterns.
   </p>
   <p className="mb-8">
-    Every <strong>stick collision</strong> creates pure, resonant sounds that echo through temple corridors, invoking <strong>Sri Venkateswara's divine grace</strong>. 
-    This ancient art form - blending rhythm, devotion, and precision - is our sacred offering during <strong>Brahmotsavams and temple Utsavams</strong>.
+    Every <strong>stick collision</strong> creates pure, resonant sounds that echo through temple corridors, invoking <strong>divine grace</strong>. 
+    This ancient art form - blending rhythm, devotion, and precision - is our sacred offering during <strong>Brahmotsavams,swamy vari kalyanam and temple Utsavams</strong>.
   </p>
   
 </div>
@@ -90,18 +90,20 @@ export default function About() {
         </div>
 
         {/* DEVOTIONAL FOCUS */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-1 gap-6 sm:gap-8">
           <div className="luxury-card p-6 sm:p-10 rounded-2xl border-4 border-[rgba(255,215,0,0.3)] group hover:scale-105 transition-all">
             <h3 className="text-2xl sm:text-3xl font-bold mb-6 luxury-text text-center">Temple Festivals</h3>
-            <ul className="space-y-3 text-lg sm:text-xl text-[var(--gold)]">
+            <ul className="space-y-3 text-lg text-center sm:text-xl text-[var(--gold)]">
               <li>• Brahmotsavams</li>
               <li>• Vaikunta Dwadasi</li>
-              <li>• Venkateswara Jayanti</li>
+              <li>• Hanuman Jayanti</li>
               <li>• Tirupati Utsavams</li>
+              <li>• Venkateswara kalyanam</li>
+
             </ul>
           </div>
 
-          <div className="luxury-card p-6 sm:p-10 rounded-2xl border-4 border-[rgba(255,215,0,0.3)] group hover:scale-105 transition-all">
+          {/* <div className="luxury-card p-6 sm:p-10 rounded-2xl border-4 border-[rgba(255,215,0,0.3)] group hover:scale-105 transition-all">
             <h3 className="text-2xl sm:text-3xl font-bold mb-6 luxury-text text-center">Sacred Songs</h3>
             <ul className="space-y-3 text-lg sm:text-xl text-[var(--gold)]">
               <li>• Venkateswara Suprabhatam</li>
@@ -109,7 +111,7 @@ export default function About() {
               <li>• Suprabhat Seva Bhajans</li>
               <li>• Sahasranama Archana</li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* FULL WIDTH CTA */}
