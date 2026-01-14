@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* ---------------------------
+   Color Tokens
+   --------------------------- */
+:root {
+  --background: #0a0a0a;
+  --foreground: #321d7d;
+  --gold: #ffd700;
+  --maroon: #800000;
+  --deep-red: #5c0000;
+}
+
+/* ---------------------------
+   Custom Classes
+   --------------------------- */
+.hero-info {
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+section button[aria-label] {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.delay-100 { 
+  animation-delay: 100ms; 
+}
+
+.delay-200 { 
+  animation-delay: 200ms; 
+}
+
+.justify-text { 
+  text-align: justify; 
+}
+
+/* Luxury text styling - NO animations */
+.luxury-text {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ff9500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.luxury-bg {
+  background: linear-gradient(135deg, #8B0000 0%, #8c0c0c 50%, #7d1010 100%);
+}
+
+/* Accessibility: focus rings for keyboard users */
+a:focus, 
+button:focus {
+  outline: 3px solid rgba(255, 215, 0, 0.6);
+  outline-offset: 2px;
+}
+
+/* Typography with luxury style - NO text-shadow */
+h1 {
+  color: #ffd700;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+h2 { 
+  color: #ffd700;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  color: #ffed4e;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-weight: 700;
+}
+
+h4 {
+  color: #ffd700;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+}
+
+strong { 
+  color: #ffd700;
+  font-weight: 800;
+}
+
+p { 
+  color: #f5f5f5;
+  line-height: 1.7;
+}
+
+li { 
+  color: #ffffff;
+  border-radius: 0;
+}
+
+.btn {
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #ffed4e;
+}
+
+/* Card styling with luxury theme - NO animations or shadows */
+.luxury-card {
+  background: linear-gradient(135deg, rgba(139, 0, 0, 0.9) 0%, rgba(92, 0, 0, 0.95) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.luxury-card:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+/* Custom scrollbar styles for admin dashboard */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(234, 179, 8, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 179, 8, 0.7);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Image optimization for lazy loading */
+img {
+  content-visibility: auto;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet responsive fixes */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Desktop responsive fixes */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .luxury-bg {
+    background: white !important;
+  }
+  
+  * {
+    color: black !important;
+  }
+}
