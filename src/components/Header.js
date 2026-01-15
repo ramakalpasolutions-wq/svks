@@ -79,82 +79,45 @@ export default function Header() {
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-yellow-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             
-            <div className="">
-              <span className="text-md sm:text-base lg:text-2xl xl:text-2xl font-black bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400 bg-clip-text text-transparent whitespace-nowrap truncate max-w-[160px] xs:max-w-[180px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-[320px] xl:max-w-[380px] transition-all duration-300 group-hover:from-yellow-200 group-hover:to-yellow-300">
-                Sri Venkateswara Kolata Samithi
-              </span>
-            </div>
+            <div>
+  <span className="text-base sm:text-lg lg:text-xl xl:text-2xl font-black bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-400 bg-clip-text text-transparent whitespace-nowrap transition-all duration-300 group-hover:from-yellow-200 group-hover:to-yellow-300">
+    Sri Venkateswara Kolata Samithi
+  </span>
+</div>
+
           </Link>
 
-          {/* 🔥 DESKTOP NAVIGATION (1080px+) - UNCHANGED */}
-          <div className="hidden xl:flex items-center justify-center flex-1 ml-150">
-            <div className="flex items-center space-x-2 xl:space-x-1  rounded-2xl p-1.5 ">
-              {navItems.map(({ href, label, icon }) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className={`group relative px-5 py-3 font-bold text-base xl:text-lg rounded-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/50 min-w-[100px] text-center ${
-                    isActive(href)
-                      ? "text-yellow-100 bg-gradient-to-r from-yellow-600/40 to-yellow-500/30 shadow-lg shadow-yellow-500/20 transform scale-105"
-                      : "text-yellow-300/90 hover:text-yellow-100 hover:bg-gradient-to-r hover:from-yellow-600/20 hover:to-yellow-500/15 hover:shadow-lg hover:shadow-yellow-500/10 hover:scale-105"
-                  }`}
-                  aria-current={isActive(href) ? "page" : undefined}
-                >
-                  <span className="flex items-center justify-center gap-2.5">
-                    <span className={`text-xl transition-all duration-300 ${isActive(href) ? "scale-110" : "group-hover:scale-110"}`}>
-                      {icon}
-                    </span>
-                    <span className="font-bold tracking-wide">{label}</span>
-                  </span>
-                  {isActive(href) && (
-                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-full" />
-                  )}
-                </Link>
-              ))}
-            </div>
-          </div>
+          {/* DESKTOP NAVIGATION (1280px+ / xl breakpoint) - LEFT ALIGNED */}
+<div className="hidden xl:flex items-center flex-1 ml-40">
+  <div className="flex items-center space-x-1 rounded-2xl p-1.5">
+    {navItems.map(({ href, label, icon }) => (
+      <Link
+        key={href}
+        href={href}
+        className={`group relative px-5 py-3 font-bold text-base xl:text-lg rounded-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400/50 min-w-[100px] text-center ${
+          isActive(href)
+            ? "text-yellow-100 bg-gradient-to-r from-yellow-600/40 to-yellow-500/30 shadow-lg shadow-yellow-500/20 transform scale-105"
+            : "text-yellow-300/90 hover:text-yellow-100 hover:bg-gradient-to-r hover:from-yellow-600/20 hover:to-yellow-500/15 hover:shadow-lg hover:shadow-yellow-500/10 hover:scale-105"
+        }`}
+        aria-current={isActive(href) ? "page" : undefined}
+      >
+        <span className="flex items-center justify-center gap-2.5">
+          <span className={`text-xl transition-all duration-300 ${isActive(href) ? "scale-110" : "group-hover:scale-110"}`}>
+            {icon}
+          </span>
+          <span className="font-bold tracking-wide">{label}</span>
+        </span>
+        {isActive(href) && (
+          <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-full" />
+        )}
+      </Link>
+    ))}
+  </div>
+</div>
 
-          {/* 🔥 HAMBURGER BUTTON - Mobile + Tablet (up to 1080px) */}
-          <div className="lg:flex items-center hidden xl:hidden">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setMobileMenuOpen(!mobileMenuOpen);
-              }}
-              className="relative p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-yellow-600/20 to-yellow-500/15 hover:from-yellow-600/30 hover:to-yellow-500/25 text-yellow-300 hover:text-yellow-100 transition-all duration-300 border-2 border-yellow-600/40 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 backdrop-blur-md group"
-              aria-label="Toggle menu"
-              aria-expanded={mobileMenuOpen}
-            >
-              <div className="relative w-6 h-6 sm:w-7 sm:h-7">
-                <svg
-                  className={`absolute inset-0 w-full h-full transition-all duration-300 ${
-                    mobileMenuOpen ? "opacity-0 rotate-90" : "opacity-100"
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-                <svg
-                  className={`absolute inset-0 w-full h-full transition-all duration-300 ${
-                    mobileMenuOpen ? "opacity-100 rotate-0" : "opacity-0 -rotate-90"
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </div>
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-yellow-500/0 via-yellow-400/0 to-yellow-500/0 group-hover:from-yellow-500/10 group-hover:via-yellow-400/5 group-hover:to-yellow-500/10 transition-all duration-500" />
-            </button>
-          </div>
 
-          {/* 🔥 EXISTING MOBILE HAMBURGER (below 1024px) */}
-          <div className="lg:hidden flex items-center">
+          {/* SINGLE HAMBURGER BUTTON - Shows below xl (below 1280px) */}
+          <div className="xl:hidden flex items-center">
             <button
               onClick={(e) => {
                 e.stopPropagation();
@@ -194,12 +157,12 @@ export default function Header() {
         </div>
       </div>
 
-      {/* 🔥 TABLET + MOBILE MENU (768px to 1080px + below 1024px) */}
+      {/* MOBILE/TABLET MENU - Shows when hamburger is clicked (below 1280px) */}
       <div
         className={`${
-          mobileMenuOpen ? "xl:hidden" : "hidden"
-        } fixed inset-x-0 transition-all duration-300 ease-out top-full opacity-100 visible translate-y-0`}
-        style={{ height: "calc(100vh - 100%)" }}
+          mobileMenuOpen ? "block" : "hidden"
+        } xl:hidden fixed inset-x-0 top-[64px] sm:top-[72px] lg:top-[88px] transition-all duration-300 ease-out`}
+        style={{ height: "calc(100vh - 64px)" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90 backdrop-blur-2xl shadow-2xl border-t border-yellow-600/30">
           <div className="h-full overflow-y-auto py-6 sm:py-8 px-4 sm:px-6 md:px-8">
